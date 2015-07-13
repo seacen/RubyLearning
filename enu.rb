@@ -1,4 +1,4 @@
-
+#written by seacen
 triangular_numbers = Enumerator.new do |yielder|
   number = 0
   count = 1
