@@ -1,20 +1,29 @@
-#written by seacen
-triangular_numbers = Enumerator.new do |yielder|
-  number = 0
-  count = 1
-  loop do
-    number += count
-    count += 1
-    yielder.yield number
-  end
+# written by seacen
+
+def Integer.all
+  Enumerator.new do |yielder, n: 0|
+    loop { yielder.yield(n += 1) }
+  end.lazy
 end
 
-def infinite_select(enum)
-  Enumerator.new do |yielder|
-    enum.each do |value|
-      yielder.yield(value) if yield(value)
-    end
-  end
-end
+p Integer.all.select { |i| (i % 3).zero? }.first(10)
 
-p infinite_select(triangular_numbers) {|val| val % 7 == 0}.first(5)
+# triangular_numbers = Enumerator.new do |yielder|
+#   number = 0
+#   count = 1
+#   loop do
+#     number += count
+#     count += 1
+#     yielder.yield number
+#   end
+# end
+#
+# def infinite_select(enum)
+#   Enumerator.new do |yielder|
+#     enum.each do |value|
+#       yielder.yield(value) if yield(value)
+#     end
+#   end
+# end
+#
+# p infinite_select(triangular_numbers) { |val| val % 7 == 0 }.first(5)
