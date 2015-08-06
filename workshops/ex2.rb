@@ -9,13 +9,18 @@ def odd_even_array(array)
       counts[:odd] += 1
     end
   end
-
-  if counts[:even]>counts[:odd]
+  if counts[:even] > counts[:odd]
     :even
   else
     :odd
   end
 end
 
+def average(array)
+  array.inject(:+).to_f / array.size
+end
+
 # test:
-# puts odd_even_array([1,9,27,6,8,14,18])
+# array=[1,2,3,4]
+# puts average(array)
+# puts odd_even_array(array)
