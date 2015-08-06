@@ -3,8 +3,8 @@ class Creature
   attr_reader :x_pos, :y_pos, :health
 
   def initialize
-    @x_pos = 3
-    @y_pos = 4
+    @x_pos = 0
+    @y_pos = 0
     @health = 100
   end
 
