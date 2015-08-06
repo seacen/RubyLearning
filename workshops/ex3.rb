@@ -13,9 +13,7 @@ class DiceRoll
   def roll_dice
     prng = Random.new
     result = []
-    @num.times do
-      result << prng.rand(1..@sides)
-    end
+    @num.times { result << prng.rand(1..@sides) }
     p result
   end
 end
