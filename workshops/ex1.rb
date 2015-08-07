@@ -1,7 +1,5 @@
 # Exercise 1
 class Creature
-  attr_reader :x_pos, :y_pos, :health
-
   def initialize
     @x_pos = 0
     @y_pos = 0
@@ -23,8 +21,6 @@ end
 
 # test:
 
-# seacen = Creature.new
-# puts seacen.x_pos
-# puts seacen.get_distance_from_centre
-# seacen.move_forward
-# puts seacen.x_pos
+seacen = Creature.new
+seacen.move_forward
+puts seacen.get_distance_from_centre
