@@ -22,6 +22,6 @@ bool = lambda do |pattern, string|
   end
 end
 
-p regex_email('sff@seacen.com', bool)
+# p regex_email('sff@seacen.com', bool)
 # p regex_phone('0403427493', bool)
 # p regex_sentence('Fuck you! you son of bitch.', bool)
